@@ -39,13 +39,13 @@ for path in all_files(yourpath,'*.jpg'):
     if not read_time(path):
         print(path),
         print(read_time(path))
-        f=open(path,'rb')
-        image_data=f.read()
-        if image_data[0:2] == b"\xff\xd8":
+        #f=open(path,'rb')
+        #image_data=f.read()
+        #if image_data[0:2] != b"\xff\xd8":
             #print(path),
             #print(read_time(path))
-            gpsdate,gpstime=find_time(path)
+            #gpsdate,gpstime=find_time(path)
             #os.system("exiftool -DateTimeOriginal='"+find_time(path)+"' -overwrite_original "+path)
-            os.system("exiftool -GPSDateStamp='"+gpsdate+"' -GPSTimeStamp='"+gpstime+"' -overwrite_original "+path)
+            #os.system("exiftool -GPSDateStamp='"+gpsdate+"' -GPSTimeStamp='"+gpstime+"' -overwrite_original "+path)
         #print(read_time(path))
             
